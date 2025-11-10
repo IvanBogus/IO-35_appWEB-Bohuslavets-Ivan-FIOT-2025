@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Comfort — готель, де комфорт поєднується зі стилем</title>
+</head>
+<body>
+  <header>
+    <div>IB</div>
+    <nav aria-label="Головна навігація">
+      <ul>
+        <li><a href="#hero">Головна</a></li>
+        <li><a href="#rooms">Номери</a></li>
+        <li><a href="#restaurant">Ресторан</a></li>
+        <li><a href="#spa">SPA</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+        <li><a href="about.html">Про проєкт (опис предметної галузі)</a></li>
+      </ul>
+    </nav>
+    <a href="tel:+380638384111">+38 (063) 838-41-11</a>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero">
+      <h1>Готель, де комфорт поєднується зі стилем</h1>
+      <img src="public/background.png" alt="Номер готелю з великим ліжком" />
+    </section>
+
+    <!-- ФОРМА ПОШУКУ/БРОНЮВАННЯ -->
+    <section id="booking">
+      <h2>Знайти номер</h2>
+      <form action="#" method="get">
+        <label>
+          Дата заїзду
+          <input type="date" name="checkin" required />
+        </label>
+        <label>
+          Дата виїзду
+          <input type="date" name="checkout" required />
+        </label>
+        <label>
+          Кількість гостей
+          <input type="number" name="guests" min="1" step="1" value="2" required />
+        </label>
+        <button type="submit">Пошук</button>
+      </form>
+    </section>
+
+    <!-- ПРО НАС + СПИСКИ -->
+    <section id="about">
+      <h2>Більше, ніж просто готель</h2>
+      <p>
+        Ми створили простір, де кожен гість почувається особливим. Затишні номери,
+        гастрономічні витвори від шеф-кухаря, розслаблюючі SPA-процедури — усе для ідеального відпочинку.
+      </p>
+
+      <h3>Наші переваги</h3>
+      <ul>
+        <li>Панорамні краєвиди та авторський інтер’єр</li>
+        <li>Ресторан із сезонним меню</li>
+        <li>SPA-зона для релаксу</li>
+      </ul>
+
+      <h3>Як забронювати номер (кроки)</h3>
+      <ol>
+        <li>Оберіть дати та кількість гостей у формі вище.</li>
+        <li>Перегляньте доступні категорії номерів.</li>
+        <li>Натисніть «Забронювати» та підтвердьте заявку.</li>
+      </ol>
+
+      <figure>
+        <img src="public/screen2-foto1.png" alt="Кухня ресторану" />
+        <figcaption>Ресторан</figcaption>
+      </figure>
+      <figure>
+        <img src="public/screen2-foto2.png" alt="Лаунж-зона готелю" />
+        <figcaption>Лаунж</figcaption>
+      </figure>
+      <figure>
+        <img src="public/cooking.png" alt="Спа-кімната" />
+        <figcaption>SPA</figcaption>
+      </figure>
+    </section>
+
+    <!-- НОМЕРИ + ТАБЛИЦЯ -->
+    <section id="rooms">
+      <h2>Ідеальний простір для відпочинку</h2>
+
+      <table>
+        <caption>Тарифи номерів (₴ за ніч)</caption>
+        <thead>
+          <tr><th>Категорія</th><th>Оснащення</th><th>Ціна</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Орія</td><td>queen-bed, кондиціонер, Wi-Fi</td><td>1800</td></tr>
+          <tr><td>Луна</td><td>king-bed, панорамні вікна, Wi-Fi</td><td>2200</td></tr>
+          <tr><td>Аврора</td><td>king-bed, робоча зона, Wi-Fi</td><td>2600</td></tr>
+          <tr><td>Верона</td><td>king-bed, балкон, Wi-Fi</td><td>2900</td></tr>
+        </tbody>
+      </table>
+
+      <article>
+        <h3>Орія</h3>
+        <img src="public/Oriya.png" alt="Номер Орія" />
+        <p>Ідеальне місце для романтичного відпочинку або розслаблюючого вікенду.</p>
+        <a href="#booking">Вибрати номер</a>
+      </article>
+
+      <article>
+        <h3>Луна</h3>
+        <img src="public/Luna.png" alt="Номер Луна" />
+        <p>Спокійний відпочинок та затишні вечори.</p>
+        <a href="#booking">Забронювати</a>
+      </article>
+
+      <article>
+        <h3>Аврора</h3>
+        <img src="public/Aurora.png" alt="Номер Аврора" />
+        <p>Ранок починається з натхнення, день — з гармонії.</p>
+        <a href="#booking">Забронювати</a>
+      </article>
+
+      <article>
+        <h3>Верона</h3>
+        <img src="public/Verona.png" alt="Номер Верона" />
+        <p>Європейський шарм і приватність.</p>
+        <a href="#booking">Забронювати</a>
+      </article>
+    </section>
+
+    <!-- Якорі під меню -->
+    <section id="restaurant"><h2>Ресторан</h2></section>
+    <section id="spa"><h2>SPA</h2></section>
+    <section id="gallery"><h2>Галерея</h2></section>
+
+    <!-- КОНТАКТИ + ФОРМА -->
+    <section id="contacts">
+      <h2>Контакти</h2>
+      <address>
+        вул. Прикладна, 10, Київ •
+        <a href="tel:+380638384111">+38 (063) 838-41-11</a> •
+        <a href="mailto:info@hotelcomfort.ua">info@hotelcomfort.ua</a>
+      </address>
+
+      <form action="#" method="post">
+        <label>Ім’я <input type="text" name="name" required /></label>
+        <label>Email <input type="email" name="email" required /></label>
+        <label>Повідомлення <textarea name="message" rows="4" required></textarea></label>
+        <button type="submit">Надіслати</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Hotel Comfort</p>
+    <nav aria-label="Сервісні посилання">
+      <a href="about.html">Про проєкт (опис предметної галузі)</a>
+    </nav>
+  </footer>
+</body>
+</html>
