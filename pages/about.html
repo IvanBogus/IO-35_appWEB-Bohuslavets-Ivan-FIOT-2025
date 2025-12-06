@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <title>Про проєкт — Hotel Comfort</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="about-page">
+  <header class="header header--compact">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Повернутися на головну Hotel Comfort">
+        <span class="logo__mark">IB</span>
+        <span class="logo__text">Hotel Comfort</span>
+      </a>
+
+      <nav class="nav" aria-label="Навігація сторінки про проєкт">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html" class="nav__link">Головна</a></li>
+          <li class="nav__item"><a href="..\pages\about.html" class="nav__link nav__link--current">Про проєкт</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-project">
+    <div class="container about-project__inner">
+      <article class="about-project__content">
+        <h1 class="section-title section-title--left">
+          Hotel Comfort — опис предметної галузі
+        </h1>
+        <p>
+          Сайт готелю призначений для ознайомлення гостей з типами номерів,
+          умовами проживання, додатковими послугами (ресторан, SPA, галерея),
+          а також для первинного бронювання номерів онлайн.
+        </p>
+
+        <h2 class="about-project__subtitle">Бізнес-логіка (скорочено)</h2>
+        <ul class="list list--check">
+          <li>Перегляд категорій номерів і тарифів.</li>
+          <li>Пошук / бронювання за датами та кількістю гостей (форма без бекенда).</li>
+          <li>Контакти й зворотний зв’язок із адміністрацією.</li>
+        </ul>
+
+        <h2 class="about-project__subtitle">Функціональні вимоги</h2>
+        <ol class="list list--steps">
+          <li>Заголовки різних рівнів на головній сторінці (h1–h3).</li>
+          <li>Зображення номерів і зони відпочинку.</li>
+          <li>Таблиця тарифів з основними параметрами номерів.</li>
+          <li>Списки (ul та ol) для переваг та інструкцій.</li>
+          <li>Дві форми: пошук/бронювання та форма зворотного зв’язку.</li>
+          <li>Посилання між сторінками (головна ↔ опис предметної галузі).</li>
+        </ol>
+
+        <h2 class="about-project__subtitle">Нефункціональні вимоги</h2>
+        <ul class="list list--dash">
+          <li>Використання HTML5 та CSS3 без серверної частини.</li>
+          <li>Коректна робота у сучасних браузерах (Chrome, Firefox, Edge, Safari).</li>
+          <li>Система контролю версій Git, репозиторій на GitHub.</li>
+          <li>Публікація живої сторінки за допомогою GitHub Pages.</li>
+        </ul>
+
+        <p class="about-project__back">
+          <a href="index.html" class="btn btn--ghost">⬅ Повернутися на головну</a>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer footer--simple">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2025 Hotel Comfort</p>
+    </div>
+  </footer>
+</body>
+</html>

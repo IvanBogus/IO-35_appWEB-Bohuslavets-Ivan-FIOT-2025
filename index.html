@@ -4,161 +4,273 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hotel Comfort — готель, де комфорт поєднується зі стилем</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <div>IB</div>
-    <nav aria-label="Головна навігація">
-      <ul>
-        <li><a href="#hero">Головна</a></li>
-        <li><a href="#rooms">Номери</a></li>
-        <li><a href="#restaurant">Ресторан</a></li>
-        <li><a href="#spa">SPA</a></li>
-        <li><a href="#gallery">Галерея</a></li>
-        <li><a href="#contacts">Контакти</a></li>
-        <li><a href="about.html">Про проєкт (опис предметної галузі)</a></li>
-      </ul>
-    </nav>
-    <a href="tel:+380638384111">+38 (063) 838-41-11</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Логотип Hotel Comfort">
+        <span class="logo__mark">IB</span>
+        <span class="logo__text">Hotel Comfort</span>
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="Головна навігація">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#hero" class="nav__link nav__link--current">Головна</a></li>
+          <li class="nav__item"><a href="#rooms" class="nav__link">Номери</a></li>
+          <li class="nav__item"><a href="#restaurant" class="nav__link">Ресторан</a></li>
+          <li class="nav__item"><a href="#spa" class="nav__link">SPA</a></li>
+          <li class="nav__item"><a href="#gallery" class="nav__link">Галерея</a></li>
+          <li class="nav__item"><a href="#contacts" class="nav__link">Контакти</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">Про проєкт</a></li>
+        </ul>
+      </nav>
+
+      <a class="header__phone" href="tel:+380638384111">+38 (063) 838-41-11</a>
+    </div>
   </header>
 
   <main>
     <!-- HERO -->
-    <section id="hero">
-      <h1>Готель, де комфорт поєднується зі стилем</h1>
-      <img src="public/background.png" alt="Номер готелю з великим ліжком" />
+    <section id="hero" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Готель, де комфорт<br />
+            <span>поєднується зі стилем</span>
+          </h1>
+          <p class="hero__subtitle">
+            Сучасні номери, ресторан із авторською кухнею та затишна SPA-зона —
+            усе для ідеального відпочинку у центрі міста.
+          </p>
+          <a href="#booking" class="btn btn--primary">Знайти номер</a>
+        </div>
+
+        <div class="hero__image-wrapper">
+          <img src="public/background.png" alt="Номер готелю з великим ліжком" class="hero__image" />
+        </div>
+      </div>
     </section>
 
     <!-- ФОРМА ПОШУКУ/БРОНЮВАННЯ -->
-    <section id="booking">
-      <h2>Знайти номер</h2>
-      <form action="#" method="get">
-        <label>
-          Дата заїзду
-          <input type="date" name="checkin" required />
-        </label>
-        <label>
-          Дата виїзду
-          <input type="date" name="checkout" required />
-        </label>
-        <label>
-          Кількість гостей
-          <input type="number" name="guests" min="1" step="1" value="2" required />
-        </label>
-        <button type="submit">Пошук</button>
-      </form>
+    <section id="booking" class="booking">
+      <div class="container">
+        <h2 class="section-title">Знайти номер</h2>
+        <form id="booking-form" class="booking__form" action="#" method="get">
+          <label class="field">
+            <span class="field__label">Дата заїзду</span>
+            <input type="date" name="checkin" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Дата виїзду</span>
+            <input type="date" name="checkout" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Кількість гостей</span>
+            <input type="number" name="guests" min="1" step="1" value="2" required />
+          </label>
+          <button type="submit" class="btn btn--secondary">Пошук</button>
+        </form>
+      </div>
     </section>
 
     <!-- ПРО НАС + СПИСКИ -->
-    <section id="about">
-      <h2>Більше, ніж просто готель</h2>
-      <p>
-        Ми створили простір, де кожен гість почувається особливим. Затишні номери,
-        гастрономічні витвори від шеф-кухаря, розслаблюючі SPA-процедури — усе для ідеального відпочинку.
-      </p>
+    <section id="about" class="about-section">
+      <div class="container about-section__inner">
+        <div class="about-section__text">
+          <h2 class="section-title">Більше, ніж просто готель</h2>
+          <p>
+            Ми створили простір, де кожен гість почувається особливим.
+            Затишні номери, гастрономічні витвори від шеф-кухаря,
+            розслаблюючі SPA-процедури — усе для ідеального відпочинку.
+          </p>
 
-      <h3>Наші переваги</h3>
-      <ul>
-        <li>Панорамні краєвиди та авторський інтер’єр</li>
-        <li>Ресторан із сезонним меню</li>
-        <li>SPA-зона для релаксу</li>
-      </ul>
+          <h3 class="about-section__subtitle">Наші переваги</h3>
+          <ul class="list list--check">
+            <li>Панорамні краєвиди та авторський інтер’єр.</li>
+            <li>Ресторан із сезонним меню.</li>
+            <li>SPA-зона для релаксу.</li>
+          </ul>
 
-      <h3>Як забронювати номер (кроки)</h3>
-      <ol>
-        <li>Оберіть дати та кількість гостей у формі вище.</li>
-        <li>Перегляньте доступні категорії номерів.</li>
-        <li>Натисніть «Забронювати» та підтвердьте заявку.</li>
-      </ol>
+          <h3 class="about-section__subtitle">Як забронювати номер</h3>
+          <ol class="list list--steps">
+            <li>Оберіть дати та кількість гостей у формі вище.</li>
+            <li>Перегляньте доступні категорії номерів.</li>
+            <li>Натисніть «Забронювати» та підтвердьте заявку.</li>
+          </ol>
+        </div>
 
-      <figure>
-        <img src="public/screen2-foto1.png" alt="Кухня ресторану" />
-        <figcaption>Ресторан</figcaption>
-      </figure>
-      <figure>
-        <img src="public/screen2-foto2.png" alt="Лаунж-зона готелю" />
-        <figcaption>Лаунж</figcaption>
-      </figure>
-      <figure>
-        <img src="public/cooking.png" alt="Спа-кімната" />
-        <figcaption>SPA</figcaption>
-      </figure>
+        <div class="about-section__gallery">
+          <figure class="about-section__figure">
+            <img src="public/screen2-foto1.png" alt="Кухня ресторану" />
+            <figcaption>SPA</figcaption>
+          </figure>
+          <figure class="about-section__figure">
+            <img src="public/screen2-foto2.png" alt="Лаунж-зона готелю" />
+            <figcaption>Лаунж</figcaption>
+          </figure>
+          <figure class="about-section__figure">
+            <img src="public/cooking.png" alt="Спа-кімната" />
+            <figcaption>Ресторан</figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
 
     <!-- НОМЕРИ + ТАБЛИЦЯ -->
-    <section id="rooms">
-      <h2>Ідеальний простір для відпочинку</h2>
+    <section id="rooms" class="rooms">
+      <div class="container">
+        <h2 class="section-title">Ідеальний простір для відпочинку</h2>
 
-      <table>
-        <caption>Тарифи номерів (₴ за ніч)</caption>
-        <thead>
-          <tr><th>Категорія</th><th>Оснащення</th><th>Ціна</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Орія</td><td>queen-bed, кондиціонер, Wi-Fi</td><td>1800</td></tr>
-          <tr><td>Луна</td><td>king-bed, панорамні вікна, Wi-Fi</td><td>2200</td></tr>
-          <tr><td>Аврора</td><td>king-bed, робоча зона, Wi-Fi</td><td>2600</td></tr>
-          <tr><td>Верона</td><td>king-bed, балкон, Wi-Fi</td><td>2900</td></tr>
-        </tbody>
-      </table>
+        <div class="rooms__table-wrapper">
+          <table class="tariff-table">
+            <caption>Тарифи номерів (₴ за ніч)</caption>
+            <thead>
+              <tr>
+                <th>Категорія</th>
+                <th>Оснащення</th>
+                <th>Ціна</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Орія</td>
+                <td>queen-bed, кондиціонер, Wi-Fi</td>
+                <td>1800</td>
+              </tr>
+              <tr>
+                <td>Луна</td>
+                <td>king-bed, панорамні вікна, Wi-Fi</td>
+                <td>2200</td>
+              </tr>
+              <tr>
+                <td>Аврора</td>
+                <td>king-bed, робоча зона, Wi-Fi</td>
+                <td>2600</td>
+              </tr>
+              <tr>
+                <td>Верона</td>
+                <td>king-bed, балкон, Wi-Fi</td>
+                <td>2900</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      <article>
-        <h3>Орія</h3>
-        <img src="public/Oriya.png" alt="Номер Орія" />
-        <p>Ідеальне місце для романтичного відпочинку або розслаблюючого вікенду.</p>
-        <a href="#booking">Вибрати номер</a>
-      </article>
+        <div class="rooms__grid">
+          <article class="room-card">
+            <img src="public/Oriya.png" alt="Номер Орія" class="room-card__image" />
+            <div class="room-card__body">
+              <h3 class="room-card__title">Орія</h3>
+              <p class="room-card__text">
+                Ідеальне місце для романтичного відпочинку або розслаблюючого вікенду.
+              </p>
+              <a href="#booking" class="btn btn--ghost">Вибрати номер</a>
+            </div>
+          </article>
 
-      <article>
-        <h3>Луна</h3>
-        <img src="public/Luna.png" alt="Номер Луна" />
-        <p>Спокійний відпочинок та затишні вечори.</p>
-        <a href="#booking">Забронювати</a>
-      </article>
+          <article class="room-card">
+            <img src="public/Luna.png" alt="Номер Луна" class="room-card__image" />
+            <div class="room-card__body">
+              <h3 class="room-card__title">Луна</h3>
+              <p class="room-card__text">
+                Спокійний відпочинок та затишні вечори з панорамним краєвидом.
+              </p>
+              <a href="#booking" class="btn btn--ghost">Забронювати</a>
+            </div>
+          </article>
 
-      <article>
-        <h3>Аврора</h3>
-        <img src="public/Aurora.png" alt="Номер Аврора" />
-        <p>Ранок починається з натхнення, день — з гармонії.</p>
-        <a href="#booking">Забронювати</a>
-      </article>
+          <article class="room-card">
+            <img src="public/Aurora.png" alt="Номер Аврора" class="room-card__image" />
+            <div class="room-card__body">
+              <h3 class="room-card__title">Аврора</h3>
+              <p class="room-card__text">
+                Простір для роботи та відпочинку з ранковим натхненням.
+              </p>
+              <a href="#booking" class="btn btn--ghost">Забронювати</a>
+            </div>
+          </article>
 
-      <article>
-        <h3>Верона</h3>
-        <img src="public/Verona.png" alt="Номер Верона" />
-        <p>Європейський шарм і приватність.</p>
-        <a href="#booking">Забронювати</a>
-      </article>
+          <article class="room-card">
+            <img src="public/Verona.png" alt="Номер Верона" class="room-card__image" />
+            <div class="room-card__body">
+              <h3 class="room-card__title">Верона</h3>
+              <p class="room-card__text">
+                Європейський шарм, приватність і власний балкон.
+              </p>
+              <a href="#booking" class="btn btn--ghost">Забронювати</a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- Якорі під меню -->
-    <section id="restaurant"><h2>Ресторан</h2></section>
-    <section id="spa"><h2>SPA</h2></section>
-    <section id="gallery"><h2>Галерея</h2></section>
+    <section id="restaurant" class="stub-section">
+      <div class="container">
+        <h2 class="section-title">Ресторан</h2>
+        <p>Розділ буде доповнено у наступних лабораторних роботах.</p>
+      </div>
+    </section>
+
+    <section id="spa" class="stub-section">
+      <div class="container">
+        <h2 class="section-title">SPA</h2>
+        <p>Опис SPA-зони буде оформлено у наступних лабораторних роботах.</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="stub-section">
+      <div class="container">
+        <h2 class="section-title">Галерея</h2>
+        <p>Фотогалерея готелю буде реалізована пізніше.</p>
+      </div>
+    </section>
 
     <!-- КОНТАКТИ + ФОРМА -->
-    <section id="contacts">
-      <h2>Контакти</h2>
-      <address>
-        вул. Прикладна, 10, Київ •
-        <a href="tel:+380638384111">+38 (063) 838-41-11</a> •
-        <a href="mailto:info@hotelcomfort.ua">info@hotelcomfort.ua</a>
-      </address>
+    <section id="contacts" class="contacts">
+      <div class="container contacts__inner">
+        <div class="contacts__info">
+          <h2 class="section-title section-title--left">Контакти</h2>
+          <address class="contacts__address">
+            вул. Прикладна, 10, Київ<br />
+            <a href="tel:+380638384111">+38 (063) 838-41-11</a><br />
+            <a href="mailto:info@hotelcomfort.ua">info@hotelcomfort.ua</a>
+          </address>
+        </div>
 
-      <form action="#" method="post">
-        <label>Ім’я <input type="text" name="name" required /></label>
-        <label>Email <input type="email" name="email" required /></label>
-        <label>Повідомлення <textarea name="message" rows="4" required></textarea></label>
-        <button type="submit">Надіслати</button>
-      </form>
+        <form class="contacts__form" action="#" method="post">
+          <h3 class="contacts__form-title">Напишіть нам</h3>
+          <label class="field">
+            <span class="field__label">Ім’я</span>
+            <input type="text" name="name" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Повідомлення</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary">Надіслати</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Hotel Comfort</p>
-    <nav aria-label="Сервісні посилання">
-      <a href="about.html">Про проєкт (опис предметної галузі)</a>
-    </nav>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2025 Hotel Comfort</p>
+      <nav aria-label="Сервісні посилання">
+        <a href="about.html" class="footer__link">Про проєкт (опис предметної галузі)</a>
+      </nav>
+    </div>
   </footer>
 </body>
 </html>
