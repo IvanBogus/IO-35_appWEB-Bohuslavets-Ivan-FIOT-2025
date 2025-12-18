@@ -40,7 +40,8 @@
           <li class="nav__item"><a href="#spa" class="nav__link">SPA</a></li>
           <li class="nav__item"><a href="#gallery" class="nav__link">Галерея</a></li>
           <li class="nav__item"><a href="#contacts" class="nav__link">Контакти</a></li>
-          <li class="nav__item"><a href="about.html" class="nav__link">Про проєкт</a></li>
+          <li class="nav__item"><a href="pages/lab7.html" class="nav__link">ЛР7</a></li>
+          <li class="nav__item"><a href="pages/about.html" class="nav__link">Про проєкт</a></li>
         </ul>
       </nav>
 
@@ -227,21 +228,28 @@
     <section id="restaurant" class="stub-section">
       <div class="container">
         <h2 class="section-title">Ресторан</h2>
-        <p>Розділ буде доповнено у наступних лабораторних роботах.</p>
+        <p>Додаткові послуги ресторану — їх можна додавати у кошик (ЛР7, завдання “Кошик + пагінація”).</p>
+        <div class="services__grid" data-services="restaurant"></div>
       </div>
     </section>
 
     <section id="spa" class="stub-section">
       <div class="container">
         <h2 class="section-title">SPA</h2>
-        <p>Опис SPA-зони буде оформлено у наступних лабораторних роботах.</p>
+        <p>SPA-послуги — додавай у кошик та керуй кількістю.</p>
+        <div class="services__grid" data-services="spa"></div>
       </div>
     </section>
 
     <section id="gallery" class="stub-section">
       <div class="container">
         <h2 class="section-title">Галерея</h2>
-        <p>Фотогалерея готелю буде реалізована пізніше.</p>
+        <p>
+          Інтерактивні завдання (галерея, таймер, проміси, пошук зображень) винесені на окрему сторінку лабораторної роботи.
+        </p>
+        <p style="text-align:center;margin-top:14px;">
+          <a class="btn btn--secondary" href="pages/lab7.html">Перейти до ЛР7</a>
+        </p>
       </div>
     </section>
 
@@ -281,7 +289,7 @@
     <div class="container footer__inner">
       <p class="footer__copy">© 2025 Hotel Comfort</p>
       <nav aria-label="Сервісні посилання">
-        <a href="/pages/about.html" class="footer__link">Про проєкт (опис предметної галузі)</a>
+        <a href="pages/about.html" class="footer__link">Про проєкт (опис предметної галузі)</a>
       </nav>
     </div>
   </footer>
@@ -310,5 +318,8 @@
       });
     });
   </script>
+
+  <!-- ЛР7: кошик + пагінація -->
+  <script src="pages/0-cart.js" defer></script>
 </body>
 </html>

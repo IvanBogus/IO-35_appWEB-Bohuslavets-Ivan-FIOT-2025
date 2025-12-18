@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ЛР7 — Проміси (iziToast)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css" />
+</head>
+<body class="about-page">
+  <header class="header header--compact">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo" aria-label="Повернутися на головну Hotel Comfort">
+        <span class="logo__mark">IB</span>
+        <span class="logo__text">Hotel Comfort</span>
+      </a>
+
+      <nav class="nav" aria-label="Навігація лабораторної роботи">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="lab7.html" class="nav__link">ЛР7</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">Про проєкт</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-project">
+    <div class="container about-project__inner">
+      <article class="about-project__content">
+        <h1 class="section-title section-title--left">Генератор промісів</h1>
+
+        <form class="contacts__form form">
+          <label class="field">
+            <span class="field__label">Delay (ms)</span>
+            <input type="number" name="delay" required />
+          </label>
+
+          <fieldset style="border:1px solid #e1e7f0;border-radius:12px;padding:12px;">
+            <legend style="padding:0 6px;">State</legend>
+            <label style="display:flex;align-items:center;gap:8px;margin-top:6px;">
+              <input type="radio" name="state" value="fulfilled" required />
+              Fulfilled
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;margin-top:6px;">
+              <input type="radio" name="state" value="rejected" required />
+              Rejected
+            </label>
+          </fieldset>
+
+          <button class="btn btn--primary" type="submit">Create notification</button>
+        </form>
+
+        <p class="about-project__back">
+          <a href="lab7.html" class="btn btn--ghost">⬅ Назад до ЛР7</a>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer footer--simple">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2025 Hotel Comfort</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+  <script src="2-snackbar.js" defer></script>
+</body>
+</html>

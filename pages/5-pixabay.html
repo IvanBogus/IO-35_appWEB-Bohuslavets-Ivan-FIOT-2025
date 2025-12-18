@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ЛР7 — Пошук зображень (Pixabay)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplelightbox/dist/simple-lightbox.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css" />
+</head>
+<body class="about-page">
+  <header class="header header--compact">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo" aria-label="Повернутися на головну Hotel Comfort">
+        <span class="logo__mark">IB</span>
+        <span class="logo__text">Hotel Comfort</span>
+      </a>
+
+      <nav class="nav" aria-label="Навігація лабораторної роботи">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="lab7.html" class="nav__link">ЛР7</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">Про проєкт</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-project">
+    <div class="container about-project__inner">
+      <article class="about-project__content">
+        <h1 class="section-title section-title--left">Пошук зображень (Pixabay)</h1>
+
+        <form class="booking__form search-form" style="grid-template-columns: 1fr auto;max-width:720px;">
+          <label class="field">
+            <span class="field__label">Пошук</span>
+            <input type="text" name="searchQuery" placeholder="cats, hotel, nature..." />
+          </label>
+          <button class="btn btn--secondary" type="submit">Search</button>
+        </form>
+
+        <p style="margin-top:10px;color:#52606d;">
+          Підказка: збережи ключ у LocalStorage під ключем <b>pixabay-api-key</b>, або додай його як
+          <b>meta[name=&quot;pixabay-key&quot;]</b>.
+        </p>
+
+        <ul class="gallery" style="margin-top:16px;"></ul>
+
+        <p class="about-project__back">
+          <a href="lab7.html" class="btn btn--ghost">⬅ Назад до ЛР7</a>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer footer--simple">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2025 Hotel Comfort</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/simplelightbox/dist/simple-lightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+  <script src="5-pixabay.js" defer></script>
+</body>
+</html>
+

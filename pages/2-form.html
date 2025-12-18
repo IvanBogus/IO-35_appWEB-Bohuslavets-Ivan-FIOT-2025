@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ЛР7 — Форма (localStorage)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="about-page">
+  <header class="header header--compact">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo" aria-label="Повернутися на головну Hotel Comfort">
+        <span class="logo__mark">IB</span>
+        <span class="logo__text">Hotel Comfort</span>
+      </a>
+
+      <nav class="nav" aria-label="Навігація лабораторної роботи">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="lab7.html" class="nav__link">ЛР7</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link">Про проєкт</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-project">
+    <div class="container about-project__inner">
+      <article class="about-project__content">
+        <h1 class="section-title section-title--left">Форма зворотного звʼязку</h1>
+
+        <form class="contacts__form feedback-form" autocomplete="off">
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input type="email" name="email" autofocus />
+          </label>
+          <label class="field">
+            <span class="field__label">Message</span>
+            <textarea name="message" rows="8"></textarea>
+          </label>
+          <button class="btn btn--primary" type="submit">Submit</button>
+        </form>
+
+        <p class="about-project__back">
+          <a href="lab7.html" class="btn btn--ghost">⬅ Назад до ЛР7</a>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer footer--simple">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2025 Hotel Comfort</p>
+    </div>
+  </footer>
+
+  <script src="2-form.js" defer></script>
+</body>
+</html>
