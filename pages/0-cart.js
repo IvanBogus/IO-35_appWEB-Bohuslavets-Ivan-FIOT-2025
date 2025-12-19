@@ -186,6 +186,9 @@
   };
 
   const open = () => {
+    if (window.AppAuth && typeof window.AppAuth.requireAuth === 'function') {
+      if (!window.AppAuth.requireAuth()) return;
+    }
     state.isOpen = true;
     overlay.hidden = false;
     document.body.classList.add('cart-open');
@@ -199,6 +202,9 @@
   };
 
   const addItem = (product) => {
+    if (window.AppAuth && typeof window.AppAuth.requireAuth === 'function') {
+      if (!window.AppAuth.requireAuth()) return;
+    }
     const found = state.items.find((i) => i.id === product.id);
     if (found) found.qty += 1;
     else state.items.push({ ...product, qty: 1 });

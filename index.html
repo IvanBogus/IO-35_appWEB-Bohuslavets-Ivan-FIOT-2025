@@ -46,6 +46,8 @@
       </nav>
 
       <a class="header__phone" href="tel:+380638384111">+38 (063) 838-41-11</a>
+      <button class="header__auth" type="button" data-auth-btn>Увійти</button>
+      <span class="auth-user" data-auth-user hidden></span>
     </div>
   </header>
 
@@ -184,7 +186,7 @@
               <p class="room-card__text">
                 Ідеальне місце для романтичного відпочинку або розслаблюючого вікенду.
               </p>
-              <a href="#booking" class="btn btn--ghost">Вибрати номер</a>
+              <a href="#booking" class="btn btn--ghost" data-room-open>Забронювати</a>
             </div>
           </article>
 
@@ -195,7 +197,7 @@
               <p class="room-card__text">
                 Спокійний відпочинок та затишні вечори з панорамним краєвидом.
               </p>
-              <a href="#booking" class="btn btn--ghost">Забронювати</a>
+              <a href="#booking" class="btn btn--ghost" data-room-open>Забронювати</a>
             </div>
           </article>
 
@@ -206,7 +208,7 @@
               <p class="room-card__text">
                 Простір для роботи та відпочинку з ранковим натхненням.
               </p>
-              <a href="#booking" class="btn btn--ghost">Забронювати</a>
+              <a href="#booking" class="btn btn--ghost" data-room-open>Забронювати</a>
             </div>
           </article>
 
@@ -217,7 +219,7 @@
               <p class="room-card__text">
                 Європейський шарм, приватність і власний балкон.
               </p>
-              <a href="#booking" class="btn btn--ghost">Забронювати</a>
+              <a href="#booking" class="btn btn--ghost" data-room-open>Забронювати</a>
             </div>
           </article>
         </div>
@@ -241,15 +243,53 @@
       </div>
     </section>
 
-    <section id="gallery" class="stub-section">
+    <section id="gallery" class="gallery-section">
       <div class="container">
         <h2 class="section-title">Галерея</h2>
-        <p>
-          Інтерактивні завдання (галерея, таймер, проміси, пошук зображень) винесені на окрему сторінку лабораторної роботи.
+        <p class="gallery-section__intro">
+          Перегляньте наші номери та зони відпочинку. Інтерактивні завдання лабораторної роботи доступні за посиланням нижче.
         </p>
-        <p style="text-align:center;margin-top:14px;">
+        <div class="gallery-section__grid">
+          <div class="gallery-section__item">
+            <img src="public/Oriya.png" alt="Номер Орія" class="gallery-section__image" />
+            <div class="gallery-section__overlay">
+              <span class="gallery-section__caption">Орія</span>
+            </div>
+          </div>
+          <div class="gallery-section__item">
+            <img src="public/Luna.png" alt="Номер Луна" class="gallery-section__image" />
+            <div class="gallery-section__overlay">
+              <span class="gallery-section__caption">Луна</span>
+            </div>
+          </div>
+          <div class="gallery-section__item">
+            <img src="public/Aurora.png" alt="Номер Аврора" class="gallery-section__image" />
+            <div class="gallery-section__overlay">
+              <span class="gallery-section__caption">Аврора</span>
+            </div>
+          </div>
+          <div class="gallery-section__item">
+            <img src="public/Verona.png" alt="Номер Верона" class="gallery-section__image" />
+            <div class="gallery-section__overlay">
+              <span class="gallery-section__caption">Верона</span>
+            </div>
+          </div>
+          <div class="gallery-section__item">
+            <img src="public/screen2-foto1.png" alt="SPA зона" class="gallery-section__image" />
+            <div class="gallery-section__overlay">
+              <span class="gallery-section__caption">SPA</span>
+            </div>
+          </div>
+          <div class="gallery-section__item">
+            <img src="public/screen2-foto2.png" alt="Лаунж зона" class="gallery-section__image" />
+            <div class="gallery-section__overlay">
+              <span class="gallery-section__caption">Лаунж</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-section__footer">
           <a class="btn btn--secondary" href="pages/lab7.html">Перейти до ЛР7</a>
-        </p>
+        </div>
       </div>
     </section>
 
@@ -260,7 +300,7 @@
           <h2 class="section-title section-title--left">Контакти</h2>
           <address class="contacts__address">
             вул. Прикладна, 10, Київ<br />
-            <a href="tel:+380638384111">+38 (063) 838-41-11</a><br />
+            <a href="tel:+380638384111">+38 (063) 838-44-44</a><br />
             <a href="mailto:info@hotelcomfort.ua">info@hotelcomfort.ua</a>
           </address>
         </div>
@@ -319,7 +359,21 @@
     });
   </script>
 
-  <!-- ЛР7: кошик + пагінація -->
+  <!-- App modal (used by auth / room details / booking) -->
+  <div class="app-modal" id="app-modal" hidden>
+    <div class="app-modal__backdrop" data-modal-close></div>
+    <div class="app-modal__panel" role="dialog" aria-modal="true" aria-label="Modal">
+      <button class="app-modal__close" type="button" data-modal-close aria-label="Close">✕</button>
+      <div class="app-modal__content" data-modal-content></div>
+    </div>
+  </div>
+
+  <!-- App scripts -->
+  <script src="pages/0-modal.js" defer></script>
+  <script src="pages/0-auth.js" defer></script>
+  <script src="pages/0-main.js" defer></script>
+
+  <!-- ЛР7: кошик + пагінація (requires auth) -->
   <script src="pages/0-cart.js" defer></script>
 </body>
 </html>
