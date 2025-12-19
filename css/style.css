@@ -328,11 +328,19 @@ header {
   transform: translateY(-0.0625rem);
 }
 
+.header__auth-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
 .auth-user {
   font-size: 0.8125rem;
   font-weight: 600;
   color: #d8e1ff;
-  padding-left: 0.25rem;
+  display: block;
+  white-space: nowrap;
 }
 
 /* Бургер-меню */
